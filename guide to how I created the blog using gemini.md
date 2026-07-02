@@ -1191,7 +1191,7 @@ Now that your local multi-account folder architecture is established and your co
 # you asked
 
 what I have done is setup the gits directory and linked the math-blog folder inside randomnumberanonymous
-
+```text
 gits
 ├── randomnumberanonymous
 │   └── math-blog -> /home/biswajitrajaguru/git/math-blog
@@ -1233,7 +1233,7 @@ tree ~/git/math-blog
             └── quarto-search.js
 
 9 directories, 24 files
-
+```
 ---
 
 # gemini response
@@ -1769,7 +1769,7 @@ Because that is where your `.git` tracking folder lives, along with your actual 
 ---
 
 # you asked
-
+```bash
 git push origin main
 The authenticity of host 'github.com (20.207.73.82)' can't be established.
 ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
@@ -1785,7 +1785,7 @@ Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To github.com-blog:randomnumberanonymous/randomnumberanonymous.github.io.git
    43e250f..eea1f43  main -> main
 biswajitrajaguru@fedora:~/git/math-blog$
-
+```
 ---
 
 # gemini response
