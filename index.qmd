@@ -1,0 +1,9 @@
+---
+title: "Expository Notes & Book Solutions"
+---
+
+Welcome! This space maps out rigorous, complete solution sets for advanced algebraic geometry and commutative algebra texts.
+
+## Current Focus Areas
+* Schemes, Morphisms, and Cohomology (Hartshorne)
+* Commutative Ring Theory (Matsumura)

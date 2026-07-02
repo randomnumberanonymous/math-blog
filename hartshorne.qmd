@@ -1,0 +1,12 @@
+---
+title: "Hartshorne: Algebraic Geometry"
+---
+
+## Chapter 1: Algebraic Varieties
+
+### Exercise 1.1
+Let $Y$ be the affine variety given by the zero locus...
+
+$$\Gamma(Y, \O_Y) \cong k[x,y]/(y-x^2)$$
+
+Proof goes here.
