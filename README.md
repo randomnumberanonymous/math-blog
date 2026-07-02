@@ -25,10 +25,10 @@ Once you are happy with your edits, take a snapshot of your work:
 Bash
 
 ### 1. Stage all changes (.qmd files, configurations, images)
-git add .
+`git add .`
 
 ### 2. Commit the changes with a clear description of what you updated
-git commit -m "Add notes on Hartshorne Chapter 1 local properties"
+`git commit -m "Add notes on Hartshorne Chapter 1 local properties"`
 
 
 ## Step 4: Push to GitHub
@@ -42,12 +42,35 @@ Bash
 
 The moment that git push finishes executing in your terminal, the rest of the pipeline happens completely in the cloud:
 
-    Trigger: GitHub detects a new push on the main branch and automatically wakes up your Quarto Publish GitHub Actions runner.
+    - *Trigger:* GitHub detects a new push on the main branch and automatically wakes up your Quarto Publish GitHub Actions runner.
 
-    Compile: The cloud runner downloads your project, runs the Quarto engine to compile your .qmd files into optimized HTML/CSS, and handles all the math typesetting.
+    - *Compile:* The cloud runner downloads your project, runs the Quarto engine to compile your .qmd files into optimized HTML/CSS, and handles all the math typesetting.
 
-    Deploy: The runner automatically commits those generated HTML files directly onto your remote gh-pages branch.
+    - *Deploy:* The runner automatically commits those generated HTML files directly onto your remote gh-pages branch.
 
-    Go Live: GitHub Pages updates its web servers.
+    - *Go Live:* GitHub Pages updates its web servers.
 
 Within 1 to 2 minutes of running your git push origin main command, you can simply refresh https://randomnumberanonymous.github.io/ and your updates will be live for the world to see!
+# The Web-to-Local Workflow
+## Step 1: Edit on GitHub.com
+
+    1. Go to your repository on GitHub.
+
+    2. Click on any file (like hartshorne.qmd) and click the pencil icon (Edit this file).
+
+    3. Make your edits right in the browser, scroll down, and click Commit changes... directly to the main branch.
+
+    *Result:* The GitHub Actions runner instantly wakes up, compiles your changes, and updates your live website automatically.
+
+## Step 2: Sync Your Fedora Machine (Crucial)
+
+Because you made those changes directly on the cloud servers, your local computer doesn't know about them yet. Before you do any new work on your laptop, you must pull those changes down.
+
+Open your Fedora terminal and run:
+Bash
+
+`cd ~/git/math-blog`
+
+`git checkout main`
+
+`git pull origin main`
