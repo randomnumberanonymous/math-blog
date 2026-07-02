@@ -1,0 +1,18 @@
+cd ~/git/math-blog
+
+# 1. Create a fresh, completely empty branch isolated from your text files
+git checkout --orphan gh-pages
+
+# 2. Clear out any staged files from this empty branch template
+git rm -rf .
+
+# 3. Create a single placeholder file so Git allows us to commit
+echo "Placeholder for Quarto engine" > README.md
+
+# 4. Commit and push this new branch infrastructure up to GitHub
+git add README.md
+git commit -m "Initialize gh-pages branch infrastructure"
+git push origin gh-pages
+
+# 5. Safely switch your local terminal environment back to your main working branch
+git checkout main
