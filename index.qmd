@@ -9,4 +9,7 @@ Welcome! This space maps out rigorous, complete solution sets for advanced algeb
 * Commutative Ring Theory (Matsumura)
 Welcome to my mathematics blog! 
 
-Check out my notes on [Hartshorne's Algebraic Geometry](hartshorne.qmd).
+
+[Books](/books/books.qmd)
+
+[Qmarkdown playground](qmd-learning.qmd).

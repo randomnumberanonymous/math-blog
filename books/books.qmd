@@ -1,0 +1,5 @@
+---
+title: Books
+---
+
+- [Hartshorne: Algebraic Geometry](<Hartshorne Algebraic Geometry/Hartshorne Algebraic Geometry.qmd>)

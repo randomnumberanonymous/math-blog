@@ -1,0 +1,6 @@
+---
+title: "Hartshorne: Algebraic Geometry"
+---
+
+## [Chapter 1: Algebraic Varieties](<Chapter 1 Varieties/Chapter 1 Varieties.qmd>)
+

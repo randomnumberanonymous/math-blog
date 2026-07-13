@@ -1,0 +1,175 @@
+---
+title: "Learning qmd"
+---
+this is creating a fragment target [Top]{#top .underline}
+
+### 10. Footnotes
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+
+## Hello World!
+
+### 1. To create a hard line break add two spaces or a backslash at the end of the line:
+[First Line].
+Second Line.
+
+First Line.  
+Second Line
+
+First Line.\
+Second Line.
+
+*Two consecutive line breaks also create a line break*
+
+### 2. Headings
+
+Level 1 **heading**
+===============
+
+Level 2 _heading_
+---------------
+
+Level 2 heading with $\mathcal {Math}$ $\mathfrak{in}$ $\mathscr{it}$: $\mathbb Q_\ell$
+---------------------------------------------------------------------------------------
+
+# Level 1
+
+## Level 2
+
+### Level 3
+
+#### Level 4
+
+##### Level 5
+
+###### Level 6
+**a blank line before a heading except at the beginning of a document is required.**  
+**a space after #s is required.**
+
+#hello
+
+
+### 3. Block quotes
+
+> Hello  
+there  
+what's up *******
+
+xxxxxxxx
+
+> 1. apple
+2. guava
+3. banana
+
+- "Lazy block quotes": each line need not be preceded by a "<". 
+- To continue the block quote environment yet intoduce a line break, we can use "  " or backslish trick when using newlines, but not consecutive newlines. 
+- list can also be block quoted.
+
+> Nested
+> 
+> > Block 
+> 
+> Quotes
+>
+> > > Nested Block Quotes
+
+> Nested
+> 
+> > Block 
+> .
+> Quotes
+>
+> > > Nested Block Quotes
+
+* In the above the the second fourth and sixth lines are necessary to continue the block quote environment and get linebreaks within the quote environment.
+
+### 4. Code blocks
+
+~~~ {.c .numberLines startFrom="100"}
+#include <stdio.h>
+If (a > 3) {
+    x += 1;
+    printf("%d %s",x, typeof(x));
+}
+~~~
+
+### 5. Line Blocks
+
+| The limerick packs laughs anatomical
+|    In space that is quite economical.
+|       But the good ones I've seen
+|         So seldom are clean
+| ------------------------------------ 
+
+| 200           Main St.
+| Berkeley, CA 94718
+|
+| -
+*Basically this is used to get identical text shape.*
+
+### 6. List
+
+"* + -" can be used for a list.
+
+* 11 (Compact list)
+* 211
+* 311
+
+* 11 (loose list)
+
+* 22 
+
+* 33
+
+### 7. Others
+
+1. _Emphasis_, *emphasis*, __Strong emphasis__, **strong emphasis**, Fea*si*ble **Stro**ng.
+2. H~2~O, H~12hj~O, 10^24rrt^, P~a\ cat~at
+3. `>>=` vs `>>` , `` ` ``
+4. [Hi there]{.underline}
+
+### 8. Bracketed Span,anchor,media elements
+
+Refer to the "bracketed_span.md".  
+Some classes for text spans:  
+
+* [Hi There]{.smallcaps},
+* [Hi There]{.underline},
+* [Hi There]{.mark},
+* 
+
+
+### 9. Links
+
+1. <https://www.google.com>
+2. <biswajit.rajaguru@gmail.com>
+3. [Google](https://www.google.com)
+4. [Email me](mailto:biswajit.rajaguru@gmail.com)
+5. [Go to Top](#top)
+6. [Hartshorne](/hartshorne.qmd)
+7. First Line
+
+### 11. Inline Notes
+
+Here is an inline note.^[Inline notes are easier to write, since
+you don't have to pick an identifier and move down to type the
+note.]
+
+
+
+
+
