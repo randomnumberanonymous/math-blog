@@ -1,0 +1,6 @@
+---
+title: "Chapter I: Varieties"
+---
+
+
+## [1. Affine Varieties](<1. Affine Varieties/1. Affine Varieties.qmd>)

@@ -4,3 +4,5 @@ nnoremap <S-Right> :bn<CR>
 nnoremap <S-Left> :bp<CR>
 inoremap <S-Right> <Esc>:bn<CR>a
 inoremap <S-Left> <Esc>:bp<CR>a
+
+set mouse=a

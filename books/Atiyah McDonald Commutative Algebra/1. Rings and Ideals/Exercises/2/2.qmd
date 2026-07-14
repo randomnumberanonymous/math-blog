@@ -1,0 +1,13 @@
+---
+title: "2."
+---
+
+Let $A$ be a ring and let $A[x]$ be the ring of polynomials in an indeterminate $x$, with coefficients in $A$. Let $f=a_0+a_1x+\cdots+a_nx^n\in A[x]$.
+
+## Question 2.i
+
+Prove that $f$ is a unit in $A[x]$ $\Leftrightarrow$ $a_0$ is an unit in $A$ and $a_1,\ldots,a_n$ are nilpotent.
+
+Hint: If $b_0+\cdots b_mx^m$ is the inverse of $f$, prove by induction on $r$, that $a_n^{r+1}b_{m-r}=0$. Hence show that $a_n$ is nilpotent and then use Ex. $1$. 
+
+Suppose we use the hint, then we have to prove that 

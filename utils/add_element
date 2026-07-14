@@ -1,0 +1,72 @@
+
+## USAGE: 
+## used to create exercises notes etc that we add to sections
+## To be run in the .../math-blog/books/<book name>/<chapter name>/section or .../math-blog/books/<book name>/<chapter name> directory if the chapters dont have sections.
+## source add_element "Element name"
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Check if the book name argument was provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 '<element name>'"
+    echo "Example: $0 '1.1'"
+    exit 1
+fi
+
+FULL_ELEMENT_NAME="$1"
+
+# 0. Automatically find the parent book's .qmd file in the current directory
+# Look for any .qmd file at the top level of this directory
+PARENT_QMD_FILES=( *.qmd )
+
+if [ ! -e "${PARENT_QMD_FILES[0]}" ]; then
+    echo "Error: No root <parent>.qmd file found in the current directory." >&2
+    echo "Are you running this script inside the specific chapter or section directory?" >&2
+    exit 1
+fi
+
+# Select the first matching .qmd file found
+PARENT_QMD="${PARENT_QMD_FILES[0]}"
+
+# 1. Sanitize the name for the directory name (remove trailing/leading spaces, replace colon with empty or space)
+# Quarto markdown links handle spaces fine if URL-encoded or wrapped in < >, 
+# but replacing the colon makes the folder structure cleaner.
+ELEMENT_DIR_NAME=$(echo "$FULL_ELEMENT_NAME" | sed 's/://g' | sed 's/  */ /g')
+
+# Define specific sub-elements for the skeleton structure
+ELEMENT_FILE_NAME="$ELEMENT_DIR_NAME.qmd"
+
+# Paths
+ELE_DIR="$ELEMENT_DIR_NAME"
+ELE_QMD="$ELE_DIR/$ELEMENT_FILE_NAME"
+
+# -----------------------------------------------------------------
+# GUARD: Check if the book structure already exists
+# -----------------------------------------------------------------
+if [ -d "$ELE_DIR" ]; then
+    echo "Error: A directory named '$ELE_DIR' already exists." >&2
+    echo "Aborting to prevent overwriting your existing element dir." >&2
+    exit 1
+fi
+
+echo "Creating structure for: $FULL_ELEMENT_NAME"
+
+# 2. Create the directories
+mkdir -p "$ELE_DIR"
+
+
+# 3. Create the Chapter-level .qmd file
+cat << EOF > "$ELE_QMD"
+---
+title: "$FULL_ELEMENT_NAME."
+---
+
+EOF
+
+# 6. Add the element entry to the discovered <parent name>.qmd file
+# Append it as a header level 2 link as per your structure design
+echo "" >> "$PARENT_QMD"
+echo "- [$FULL_ELEMENT_NAME](<$ELEMENT_DIR_NAME/$ELEMENT_DIR_NAME.qmd>)" >> "$PARENT_QMD"
+
+echo "Successfully generated structure and updated $PARENT_QMD!"

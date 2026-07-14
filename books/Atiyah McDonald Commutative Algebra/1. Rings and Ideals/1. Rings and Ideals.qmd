@@ -1,0 +1,6 @@
+---
+title: "1. Rings and Ideals"
+---
+
+
+## [Exercises](<Exercises/Exercises.qmd>)

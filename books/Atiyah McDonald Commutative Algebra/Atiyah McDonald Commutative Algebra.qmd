@@ -1,0 +1,5 @@
+---
+title: "Atiyah McDonald Commutative Algebra"
+---
+
+## [1. Rings and Ideals](<1. Rings and Ideals/1. Rings and Ideals.qmd>)

@@ -1,0 +1,72 @@
+
+## USAGE: 
+## To be run in the .../math-blog/books/<book name> directory
+## source add_chapter "Chapter name in the format: Chapter 1 Varieties"
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Check if the book name argument was provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 'Chapter <n> <Name>'"
+    echo "Example: $0 'Chapter I Varieties'"
+    exit 1
+fi
+
+FULL_CHAPTER_NAME="$1"
+
+# 0. Automatically find the parent book's .qmd file in the current directory
+# Look for any .qmd file at the top level of this directory
+BOOK_QMD_FILES=( *.qmd )
+
+if [ ! -e "${BOOK_QMD_FILES[0]}" ]; then
+    echo "Error: No root book .qmd file found in the current directory." >&2
+    echo "Are you running this script inside the specific book directory?" >&2
+    exit 1
+fi
+
+# Select the first matching .qmd file found
+BOOK_QMD="${BOOK_QMD_FILES[0]}"
+
+# 1. Sanitize the name for the directory name (remove trailing/leading spaces, replace colon with empty or space)
+# Quarto markdown links handle spaces fine if URL-encoded or wrapped in < >, 
+# but replacing the colon makes the folder structure cleaner.
+CHAPTER_DIR_NAME=$(echo "$FULL_CHAPTER_NAME" | sed 's/://g' | sed 's/  */ /g')
+
+# Define specific sub-elements for the skeleton structure
+CHAPTER_FILE_NAME="$CHAPTER_DIR_NAME.qmd"
+EXERCISE_FILE_NAME="1.1.qmd"
+
+# Paths
+CH_DIR="$CHAPTER_DIR_NAME"
+CH_QMD="$CH_DIR/$CHAPTER_FILE_NAME"
+
+# -----------------------------------------------------------------
+# GUARD: Check if the book structure already exists
+# -----------------------------------------------------------------
+if [ -d "$CH_DIR" ]; then
+    echo "Error: A directory named '$CH_DIR' already exists." >&2
+    echo "Aborting to prevent overwriting your existing Chapter dir." >&2
+    exit 1
+fi
+
+echo "Creating structure for: $FULL_CHAPTER_NAME"
+
+# 2. Create the directories
+mkdir -p "$CH_DIR"
+
+
+# 3. Create the Chapter-level .qmd file
+cat << EOF > "$CH_QMD"
+---
+title: "$FULL_CHAPTER_NAME"
+---
+
+EOF
+
+# 6. Add the chapter entry to the discovered <book name>.qmd file
+# Append it as a header level 2 link as per your structure design
+echo "" >> "$BOOK_QMD"
+echo "## [$FULL_CHAPTER_NAME](<$CHAPTER_DIR_NAME/$CHAPTER_DIR_NAME.qmd>)" >> "$BOOK_QMD"
+
+echo "Successfully generated structure and updated $BOOK_QMD!"

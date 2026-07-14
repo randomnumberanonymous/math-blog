@@ -1,0 +1,65 @@
+
+## USAGE: 
+## To be run in the .../math-blog/books directory
+## source add_book.sh "Book name in this format: Hartshorne Algebraic Geometry"
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Check if the book name argument was provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 'Author: Book Name'"
+    echo "Example: $0 'Hartshorne: Algebraic Geometry'"
+    exit 1
+fi
+
+FULL_BOOK_NAME="$1"
+
+# 1. Sanitize the book name for the directory name (remove trailing/leading spaces, replace colon with empty or space)
+# Quarto markdown links handle spaces fine if URL-encoded or wrapped in < >, 
+# but replacing the colon makes the folder structure cleaner.
+DIR_BOOK_NAME=$(echo "$FULL_BOOK_NAME" | sed 's/://g' | sed 's/  */ /g')
+
+# Define specific sub-elements for the skeleton structure
+
+# Paths
+BOOK_DIR="$DIR_BOOK_NAME"
+BOOK_QMD="$BOOK_DIR/$DIR_BOOK_NAME.qmd"
+
+# -----------------------------------------------------------------
+# GUARD: Check if the book structure already exists
+# -----------------------------------------------------------------
+if [ -d "$BOOK_DIR" ]; then
+    echo "Error: A directory named '$BOOK_DIR' already exists." >&2
+    echo "Aborting to prevent overwriting your existing notes." >&2
+    exit 1
+fi
+
+echo "Creating structure for: $FULL_BOOK_NAME"
+
+# 2. Create the directories
+mkdir -p "$BOOK_DIR"
+
+# 3. Create the Book-level .qmd file
+cat << EOF > "$BOOK_QMD"
+---
+title: "$FULL_BOOK_NAME"
+---
+EOF
+
+
+# 6. Add the entry to the root books.qmd file
+# If books.qmd doesn't exist, create it with a header first
+if [ ! -f "books.qmd" ]; then
+    cat << EOF > books.qmd
+---
+title: Books
+---
+
+EOF
+fi
+
+# Append the new markdown link to the root file
+echo "- [$FULL_BOOK_NAME](<$BOOK_DIR/$DIR_BOOK_NAME.qmd>)" >> books.qmd
+
+echo "Successfully generated structure and updated books.qmd!"
