@@ -2,30 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://randomnumberanonymous.github.io/math-blog/index.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <lastmod>2026-07-14T22:09:48.425Z</lastmod>
   </url>
   <url>
-    <loc>https://randomnumberanonymous.github.io/math-blog/books/books.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Atiyah McDonald Commutative Algebra/1. Rings and Ideals/1. Rings and Ideals.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
   </url>
   <url>
-    <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Chapter 1 Varieties/1.1.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Atiyah McDonald Commutative Algebra/1. Rings and Ideals/Exercises/Exercises.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Matsumura Commutative Algebra/Matsumura Commutative Algebra.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Chapter I Varieties/Chapter I Varieties.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Chapter I Varieties/1. Affine Varieties/Exercise 1.1/Exercise 1.1.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/how to add books chapters sections exercises.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/how I created this blog/guide to how I created the blog using gemini.html</loc>
+    <lastmod>2026-07-14T22:09:48.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/how I created this blog/what is the gh-pages quarto publish.html</loc>
+    <lastmod>2026-07-14T22:09:48.425Z</lastmod>
   </url>
   <url>
     <loc>https://randomnumberanonymous.github.io/math-blog/qmd-learning.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <lastmod>2026-07-14T22:09:48.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/how I created this blog/How I creaed this blog v2.html</loc>
+    <lastmod>2026-07-14T22:09:48.424Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/how I created this blog/how I moved the math-blog and updated the website for it.html</loc>
+    <lastmod>2026-07-14T22:09:48.425Z</lastmod>
   </url>
   <url>
     <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Hartshorne Algebraic Geometry.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
   </url>
   <url>
-    <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Chapter 1 Varieties/Chapter 1 Varieties.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Hartshorne Algebraic Geometry/Chapter I Varieties/1. Affine Varieties/1. Affine Varieties.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
   </url>
   <url>
-    <loc>https://randomnumberanonymous.github.io/math-blog/guide to how I created the blog using gemini.html</loc>
-    <lastmod>2026-07-13T16:26:25.644Z</lastmod>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/books.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Atiyah McDonald Commutative Algebra/1. Rings and Ideals/Exercises/1/1.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Atiyah McDonald Commutative Algebra/1. Rings and Ideals/Exercises/2/2.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://randomnumberanonymous.github.io/math-blog/books/Atiyah McDonald Commutative Algebra/Atiyah McDonald Commutative Algebra.html</loc>
+    <lastmod>2026-07-14T22:09:48.423Z</lastmod>
   </url>
 </urlset>

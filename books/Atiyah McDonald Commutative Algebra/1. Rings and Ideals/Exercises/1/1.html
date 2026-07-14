@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hartshorne: Algebraic Geometry – Spec(R): Advanced Math Notes</title>
+<title>1 – Spec(R): Advanced Math Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,6 +84,35 @@ ul.task-list li input[type="checkbox"] {
   };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Spec(R): Advanced Math Notes</span>
     </a>
   </div>
@@ -105,11 +134,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../hartshorne.qmd"> 
+    <a class="nav-link" href="../../../../../hartshorne.qmd"> 
 <span class="menu-text">Hartshorne Solutions</span></a>
   </li>  
 </ul>
@@ -128,7 +157,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#chapter-i-algebraic-varieties" id="toc-chapter-i-algebraic-varieties" class="nav-link active" data-scroll-target="#chapter-i-algebraic-varieties">Chapter I: Algebraic Varieties</a></li>
+  <li><a href="#question" id="toc-question" class="nav-link active" data-scroll-target="#question">Question</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution">Solution</a></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hartshorne: Algebraic Geometry</h1>
+<h1 class="title">1</h1>
 </div>
 
 
@@ -154,8 +184,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="chapter-i-algebraic-varieties" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-i-algebraic-varieties"><a href="../../books/Hartshorne Algebraic Geometry/Chapter I Varieties/Chapter I Varieties.html">Chapter I: Algebraic Varieties</a></h2>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question">Question</h2>
+<p>Let <span class="math inline">\(x\)</span> be a nilpotent element of a ring <span class="math inline">\(A\)</span>. Show that <span class="math inline">\(1+x\)</span> is a unit of <span class="math inline">\(A\)</span>. Deduce that the sum of a nilpotent element and an unit is a unit.</p>
+</section>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Fact: If <span class="math inline">\(x\)</span> is a nilpotent element of a ring, then the infinite sum <span class="math inline">\(\displaystyle y =\sum_{n=0}^\infty x^n\)</span> is well defined as an element of the ring <span class="math inline">\(A\)</span>. This element is a unit of <span class="math inline">\(A\)</span> and <span class="math inline">\(\displaystyle (1-x)(\sum_{n=0}^\infty x^n) = 1\)</span>.</p>
+<p>Proof: Let <span class="math inline">\(x^{N+1}=0\)</span>. Then <span class="math inline">\(\displaystyle \sum_{n=0}^\infty x^n = 1+\cdots+x^N\)</span>.<br>
+So <span class="math inline">\(\displaystyle (1-x)(\sum_{n=0}^\infty x^n) = (1-x)(1+\cdots+x^N) = (1+\cdots+x^N)-(x+\cdots+x^{N+1}) = 1 - x^{N+1} = 1.\)</span></p>
+<p>If <span class="math inline">\(x\)</span> is nilpotent, then <span class="math inline">\(-x\)</span> is also nilpotent. In particular if <span class="math inline">\(x^N=0\)</span>, then <span class="math inline">\((-x)^N=0\)</span>. So the above proof implies: <span class="math display">\[\big(1-(-x)\big)\big(\sum_{n=0}^\infty (-x)^n\big) = 1.\]</span><br>
+Hence <span class="math inline">\((1+x)\big(1-x+x^2-\cdots+(-1)^Nx^N\big)=1\)</span>.</p>
+<p>Let us now consider the generalisation. Suppose <span class="math inline">\(u\)</span> is an unit of <span class="math inline">\(A\)</span> and <span class="math inline">\(n\)</span> is a nilpotent element of <span class="math inline">\(A\)</span>. Let <span class="math inline">\(s = u + n\)</span>. Now to use the result we just proved we have to some way relate it to a sum of the form <span class="math inline">\(1+x\)</span>. There are two facts:<br>
+(a). The product of a nilpotent element with any other element is also nilpotent.<br>
+(b). If <span class="math inline">\(v\)</span> is an unit, then an element <span class="math inline">\(a\)</span> of the ring is an unit if and only if the element <span class="math inline">\(va\)</span> is also an unit.<br>
+So to prove that <span class="math inline">\(u+n\)</span> is a unit it is sufficient to prove <span class="math inline">\(v(u+n)\)</span> is also an unit for some unit <span class="math inline">\(v\)</span>. We want the product <span class="math inline">\(v(u+n)\)</span> to be of the form <span class="math inline">\(1+x\)</span>, where <span class="math inline">\(x\)</span> is nilpotent. The most suggestive candidate for <span class="math inline">\(v\)</span> is <span class="math inline">\(u^{-1}\)</span>. But <span class="math inline">\(u^{-1}(u+n)=1+u^{-1}n\)</span>. This last sum is of the form <span class="math inline">\(1+x\)</span>, with <span class="math inline">\(x\)</span> nilpotent. So this sum is an unit. Hence the original sum is an unit.</p>
+<p><strong>Almost every exercise in this book teaches us an important fact, that we need to remember. When working in Algebraic geometry all these facts are very useful. In fact that is the purpose of the exercises, particularly in this book.</strong></p>
+<p>The first fact to remember is that the sum and difference of a unit and nilpotent is an unit. So <span class="math inline">\(\pm u \pm n\)</span> is a unit keeping in mind that <span class="math inline">\(-1\)</span> is a unit in any ring.</p>
+<p>Fact: the sum of two nilpotents is nilpotent.</p>
+<p>Proof: Let <span class="math inline">\(a^{n_1}=0\)</span> and <span class="math inline">\(b^{n_2}=0\)</span>. Then <span class="math inline">\(\displaystyle (a+b)^{n_1+n_2-1} = \sum_{i+j=n_1+n_2-1}a^ib^j\)</span>. But if <span class="math inline">\(i\leq n_1-1\)</span>, then <span class="math inline">\(j = n_1+n_2-1-i=n_2 + (n_1-1-i)\geq n_2\)</span>. So in every summand of this binomial sum the power of <span class="math inline">\(a\)</span> is atleast <span class="math inline">\(n_1\)</span> or the power of <span class="math inline">\(b\)</span> is atleast <span class="math inline">\(n_2\)</span>. So in all summands either the power of <span class="math inline">\(a\)</span> is <span class="math inline">\(0\)</span> or the power of <span class="math inline">\(b\)</span> is <span class="math inline">\(0\)</span>. So every summand is <span class="math inline">\(0\)</span>. So the sum <span class="math inline">\(0\)</span>. Hence <span class="math inline">\((a+b)^{n_1+n_2-1}=0\)</span>.</p>
+<p>It is instructive verify these facts(that hold in commutative rings ) for square matrices, with entries in commutative rings. If <span class="math inline">\(R\)</span> is a commutative ring, then <span class="math inline">\(M_n(R)\)</span> denotes the ring of <span class="math inline">\(n\times n\)</span> matrices with coefficients in <span class="math inline">\(R\)</span>. <span class="math inline">\(M_n(R)\)</span> has a subring <span class="math inline">\(RI_n\)</span> that lies at the center of the matrix ring, and <span class="math inline">\(M_n(R)\)</span> is a <span class="math inline">\(R-\)</span>algebra.<br>
+(a). If <span class="math inline">\(A\)</span> is nilpotent, then <span class="math inline">\(I+A\)</span> is a unit. The proof of this is same as that of first part above. This is because the sub-algebra(sub-ring) generated by <span class="math inline">\(A\)</span> over <span class="math inline">\(R\)</span> in <span class="math inline">\(M_n(R)\)</span> is a commutative ring and all computations occur in this commutative ring. This ring is the image of <span class="math inline">\(R[x]\)</span> under the homomorphism <span class="math inline">\(R[x]\to M_n(R),\quad x\mapsto A\)</span>.<br>
+(b). If <span class="math inline">\(A\)</span> is nilpotent, and <span class="math inline">\(B\)</span> is another matrix. Then <span class="math inline">\(AB\)</span> maynot be nilpotent. Consider <span class="math display">\[A = \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix}, \quad B = \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix}.\]</span> Then <span class="math inline">\(A\)</span> is strictly upper-triangular, so it is nilpotent (<span class="math inline">\(A^2 = 0\)</span>).<span class="math inline">\(B\)</span> is strictly lower-triangular, so it is also nilpotent (<span class="math inline">\(B^2 = 0\)</span>).Now let’s compute the product <span class="math inline">\(AB\)</span>:<span class="math display">\[AB = \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix} \begin{pmatrix} 0 &amp; 0 \\ 1 &amp; 0 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{pmatrix}.\]</span> The product is a diagonal matrix with units in the diagonal. Such a matrix cannot be nilpotent. In fact a finite diagonal matrix is nilpotent iff the entries of the diagonal are nilpotent. So product of two nilpotents can be non-nilpotent.<br>
+(c). If <span class="math inline">\(N\)</span> is a nilpotent matrix and <span class="math inline">\(A\)</span> commutes with N, the <span class="math inline">\(AN\)</span> is nilpotent. A pair of commuting matrices generates a commutative sub ring over the base ring. So all computations involving only them is done in that commutative ring. So properties that hold in commutative rings also holds good here.<br>
+(d). It is true that <span class="math inline">\(A\)</span> is a unit iff there exists another unit <span class="math inline">\(B\)</span>, such that <span class="math inline">\(AB\)</span> is a unit.<br>
+(e). The sum of unit and nilpotent need not be a unit in matrices. <span class="math display">\[N = \begin{pmatrix} 0 &amp; 1 \\ 0 &amp; 0 \end{pmatrix},U = \begin{pmatrix} 1 &amp; 0 \\ 1 &amp; 1 \end{pmatrix}.\]</span> Then <span class="math display">\[U + N =\begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{pmatrix}\]</span> which is not invertible as its determinant is <span class="math inline">\(0\)</span>.<br>
+(f). But if <span class="math inline">\(U\)</span> and <span class="math inline">\(N\)</span> commute, then <span class="math inline">\(U^{-1}\)</span> and <span class="math inline">\(N\)</span> also commute . So that <span class="math inline">\(U^{-1}(U+N) = I + U^{-1}N\)</span>, But <span class="math inline">\(U^{-1}N\)</span> is nilpotent by what we have said above. So <span class="math inline">\(I + U^{-1}N\)</span> is an unit by what we have said before. So if <span class="math inline">\(U,N\)</span> commute then <span class="math inline">\(U+N\)</span> is an unit.</p>
 
 
 </section>

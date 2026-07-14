@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hartshorne: Algebraic Geometry – Spec(R): Advanced Math Notes</title>
+<title>2. – Spec(R): Advanced Math Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,23 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../">
+<script src="../../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,6 +84,35 @@ ul.task-list li input[type="checkbox"] {
   };
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -94,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../../../index.html">
     <span class="navbar-title">Spec(R): Advanced Math Notes</span>
     </a>
   </div>
@@ -105,11 +134,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../hartshorne.qmd"> 
+    <a class="nav-link" href="../../../../../hartshorne.qmd"> 
 <span class="menu-text">Hartshorne Solutions</span></a>
   </li>  
 </ul>
@@ -128,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#chapter-i-algebraic-varieties" id="toc-chapter-i-algebraic-varieties" class="nav-link active" data-scroll-target="#chapter-i-algebraic-varieties">Chapter I: Algebraic Varieties</a></li>
+  <li><a href="#question-2.i" id="toc-question-2.i" class="nav-link active" data-scroll-target="#question-2.i">Question 2.i</a></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Hartshorne: Algebraic Geometry</h1>
+<h1 class="title">2.</h1>
 </div>
 
 
@@ -154,8 +183,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="chapter-i-algebraic-varieties" class="level2">
-<h2 class="anchored" data-anchor-id="chapter-i-algebraic-varieties"><a href="../../books/Hartshorne Algebraic Geometry/Chapter I Varieties/Chapter I Varieties.html">Chapter I: Algebraic Varieties</a></h2>
+<p>Let <span class="math inline">\(A\)</span> be a ring and let <span class="math inline">\(A[x]\)</span> be the ring of polynomials in an indeterminate <span class="math inline">\(x\)</span>, with coefficients in <span class="math inline">\(A\)</span>. Let <span class="math inline">\(f=a_0+a_1x+\cdots+a_nx^n\in A[x]\)</span>.</p>
+<section id="question-2.i" class="level2">
+<h2 class="anchored" data-anchor-id="question-2.i">Question 2.i</h2>
+<p>Prove that <span class="math inline">\(f\)</span> is a unit in <span class="math inline">\(A[x]\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(a_0\)</span> is an unit in <span class="math inline">\(A\)</span> and <span class="math inline">\(a_1,\ldots,a_n\)</span> are nilpotent.</p>
+<p>Hint: If <span class="math inline">\(b_0+\cdots b_mx^m\)</span> is the inverse of <span class="math inline">\(f\)</span>, prove by induction on <span class="math inline">\(r\)</span>, that <span class="math inline">\(a_n^{r+1}b_{m-r}=0\)</span>. Hence show that <span class="math inline">\(a_n\)</span> is nilpotent and then use Ex. <span class="math inline">\(1\)</span>.</p>
+<p>Suppose we use the hint, then we have to prove that</p>
 
 
 </section>

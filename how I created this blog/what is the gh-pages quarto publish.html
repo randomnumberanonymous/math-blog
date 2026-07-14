@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 1: Varieties – Spec(R): Advanced Math Notes</title>
+<title>what-is-the-gh-pages-quarto-publish – Spec(R): Advanced Math Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,26 +23,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,35 +119,6 @@ ul.task-list li input[type="checkbox"] {
   };
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -123,7 +129,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Spec(R): Advanced Math Notes</span>
     </a>
   </div>
@@ -134,11 +140,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../hartshorne.qmd"> 
+    <a class="nav-link" href="../hartshorne.qmd"> 
 <span class="menu-text">Hartshorne Solutions</span></a>
   </li>  
 </ul>
@@ -157,49 +163,100 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#affine-varieties" id="toc-affine-varieties" class="nav-link active" data-scroll-target="#affine-varieties">1. Affine Varieties</a>
-  <ul class="collapse">
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  </ul></li>
+  <li><a href="#what-is-the-.github-folder" id="toc-what-is-the-.github-folder" class="nav-link active" data-scroll-target="#what-is-the-.github-folder">What is the <code>.github/</code> folder?</a></li>
+  <li><a href="#what-is-the-workflows-folder" id="toc-what-is-the-workflows-folder" class="nav-link" data-scroll-target="#what-is-the-workflows-folder">What is the <code>workflows/</code> folder?</a></li>
+  <li><a href="#how-publish.yml-triggers-actions" id="toc-how-publish.yml-triggers-actions" class="nav-link" data-scroll-target="#how-publish.yml-triggers-actions">How <code>publish.yml</code> Triggers Actions</a></li>
+  <li><a href="#the-two-parallel-timelines" id="toc-the-two-parallel-timelines" class="nav-link" data-scroll-target="#the-two-parallel-timelines">The Two Parallel Timelines</a></li>
+  <li><a href="#what-quarto-does-in-that-split-second" id="toc-what-quarto-does-in-that-split-second" class="nav-link" data-scroll-target="#what-quarto-does-in-that-split-second">What Quarto Does in that Split Second</a></li>
+  <li><a href="#why-is-it-accessible-online" id="toc-why-is-it-accessible-online" class="nav-link" data-scroll-target="#why-is-it-accessible-online">Why is it Accessible Online?</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Chapter 1: Varieties</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="affine-varieties" class="level1">
-<h1>1. Affine Varieties</h1>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<p><code>btw what is the workflows folder and what is .github folder. how does publish.yml trigger actions</code></p>
+<section id="what-is-the-.github-folder" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-.github-folder">What is the <code>.github/</code> folder?</h3>
+<p>In the world of Git and GitHub, any folder or file that begins with a dot (like <code>.gitignore</code> or <code>.github/</code>) is a <strong>hidden directory</strong>. By convention, GitHub reserves the specialized <strong><code>.github/</code></strong> folder at the absolute root of your project repository to hold all configuration files related to GitHub’s automated features, project management, and server-side logic.</p>
+<p>If you put configuration files anywhere else in your project, GitHub’s servers will completely ignore them.</p>
+<hr>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<section id="what-is-the-workflows-folder" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-workflows-folder">What is the <code>workflows/</code> folder?</h3>
+<p>Inside that <code>.github/</code> directory sits a mandatory subfolder named <strong><code>workflows/</code></strong>.</p>
+<p>This folder is the dedicated command center for <strong>GitHub Actions</strong> (GitHub’s built-in automation and continuous integration platform). Every single <code>.yml</code> or <code>.yaml</code> file you place inside <code>.github/workflows/</code> acts as an independent script telling GitHub’s cloud servers to spin up an isolated virtual machine and execute tasks on your behalf whenever specific triggers occur.</p>
+<hr>
+</section>
+<section id="how-publish.yml-triggers-actions" class="level3">
+<h3 class="anchored" data-anchor-id="how-publish.yml-triggers-actions">How <code>publish.yml</code> Triggers Actions</h3>
+<p>Your <code>publish.yml</code> file is written in YAML (Yet Another Markup Language). It functions exactly like a blueprint or a recipe. GitHub’s servers constantly monitor your repository, and the moment a condition inside that file is met, it parses the instructions from top to bottom.</p>
+<p>Here is the exact mechanism of how your <code>publish.yml</code> orchestrates a build:</p>
+<section id="the-event-listener-on" class="level4">
+<h4 class="anchored" data-anchor-id="the-event-listener-on">1. The Event Listener (<code>on:</code>)</h4>
+<p>At the very top of your file, you have this block:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at"> main</span><span class="kw">,</span><span class="at"> master </span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>GitHub reads this as an active webhook listener. The split second you execute <code>git push origin main</code> from your Fedora terminal and the code lands on GitHub’s servers, GitHub flags a <strong>Push Event</strong>. It checks <code>.github/workflows/</code> for any script listening for a push to the <code>main</code> branch, finds your <code>publish.yml</code>, and triggers the workflow run.</p>
+</section>
+<section id="provisioning-the-environment-runs-on" class="level4">
+<h4 class="anchored" data-anchor-id="provisioning-the-environment-runs-on">2. Provisioning the Environment (<code>runs-on:</code>)</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build-deploy</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>GitHub allocates a clean, isolated cloud virtual machine (a “runner”) running the latest version of Ubuntu Linux.</p>
+</section>
+<section id="step-by-step-execution-steps" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-execution-steps">3. Step-by-Step Execution (<code>steps:</code>)</h4>
+<p>The runner executes a sequence of isolated actions down the file line-by-line:</p>
 <ul>
-<li><a href="../../../books/Hartshorne Algebraic Geometry/Chapter 1 Varieties/1.1.html"><span class="math inline">\(1.1\)</span></a></li>
+<li><strong>Step A (<code>uses: actions/checkout@v4</code>):</strong> The clean Ubuntu virtual machine starts completely empty. This step clones your repository’s files (<code>_quarto.yml</code>, your <code>.qmd</code> notebooks, your <code>books/</code> folder) directly onto the virtual machine’s local hard drive so it can work on them.</li>
+<li><strong>Step B (<code>uses: quarto-dev/quarto-actions/setup@v2</code>):</strong> This downloads and installs the Quarto CLI engine onto the cloud virtual machine, making the <code>quarto</code> command available in its environment.</li>
+<li><strong>Step C (<code>uses: quarto-dev/quarto-actions/publish@v2</code>):</strong> This acts exactly as if someone typed <code>quarto publish gh-pages</code> directly into a terminal on that cloud machine. Quarto compiles your markdown and mathematical notation into production HTML/CSS assets and immediately commits and pushes those generated files over onto your repository’s isolated <code>gh-pages</code> branch.</li>
 </ul>
-
-
+<p>Once the final step finishes without throwing a terminal error, the virtual machine safely dissolves, and GitHub updates your dashboard with a green checkmark!</p>
+<p><code>quarto publish gh-pages means dump the published html/css/ etc into the gh-pages golder? which is accessible online</code></p>
+<p>Exactly! You’ve got the concept down perfectly, though there is one subtle but brilliant Git trick happening under the hood that makes it even cooler than a regular folder.</p>
+<p>When you run <code>quarto publish gh-pages</code>, Quarto doesn’t just dump the files into a local folder named <code>gh-pages</code>. Instead, it treats <code>gh-pages</code> as a completely separate <strong>branch</strong> (like a parallel timeline of your project) that lives hidden inside your <code>.git</code> database.</p>
+<p>Here is exactly how it splits the work behind the scenes:</p>
 </section>
+</section>
+<section id="the-two-parallel-timelines" class="level3">
+<h3 class="anchored" data-anchor-id="the-two-parallel-timelines">The Two Parallel Timelines</h3>
+<pre><code>               [ Your Repository ]
+                       |
+        +--------------+--------------+
+        |                             |
+    [ main branch ]             [ gh-pages branch ]
+  Your raw source code:        The compiled website:
+  - index.qmd                  - index.html
+  - _quarto.yml                - site_libs/
+  - books/ (.qmd files)        - books/ (.html files)
+</code></pre>
+<hr>
+</section>
+<section id="what-quarto-does-in-that-split-second" class="level3">
+<h3 class="anchored" data-anchor-id="what-quarto-does-in-that-split-second">What Quarto Does in that Split Second</h3>
+<p>When that step runs, Quarto acts like a lightning-fast digital assistant:</p>
+<ol type="1">
+<li>It reads your raw <code>.qmd</code> files on the <code>main</code> branch.</li>
+<li>It compiles all your text and complex mathematical symbols into static <code>html</code>, <code>css</code>, and javascript assets inside a temporary scratchpad.</li>
+<li>It sneaks behind the scenes, switches over to your empty <code>gh-pages</code> branch, cracks open that snapshot, drops <em>only</em> those compiled web files there, and seals a brand-new commit.</li>
+<li>It fires a <code>git push origin gh-pages</code> to launch that specific branch straight to GitHub’s cloud servers.</li>
+</ol>
+<hr>
+</section>
+<section id="why-is-it-accessible-online" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-it-accessible-online">Why is it Accessible Online?</h3>
+<p>GitHub is hardwired to watch that specific <code>gh-pages</code> branch if you turn on GitHub Pages in your settings.</p>
+<p>The moment GitHub’s native web servers see a new commit land on <code>gh-pages</code>, they immediately grab that raw <code>index.html</code> file and serve it up instantly to any web browser requesting your URL (<code>[https://randomnumberanonymous.github.io/math-blog/](https://randomnumberanonymous.github.io/math-blog/)</code>).</p>
+<p>It’s an incredibly clean separation: your <code>main</code> branch stays pristine with just your clean markdown text and geometry notes, while your <code>gh-pages</code> branch does all the messy work of hosting the heavy compiled code!</p>
+
+
 </section>
 
 </main> <!-- /main -->
