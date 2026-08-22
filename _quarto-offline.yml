@@ -1,0 +1,4 @@
+# _quarto-offline.yml
+format:
+  html:
+    self-contained-math: true

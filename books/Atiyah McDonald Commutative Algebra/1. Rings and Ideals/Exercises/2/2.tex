@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{amsart} % Or article/book
+
+% --- GLOBAL PREAMBLE ---
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% --- THEOREM STYLES & COMMANDS ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\begin{document}
+
+    \title{Textbook Solutions Manual}
+    \author{Your Name}
+    %	\maketitle
+
+    % --- INTERACTIVE COMPILATION ZONE ---
+    % Comment out lines using '%' to only preview what you are currently testing
+
+    %\input{./Appendix/Product of subgroups of a group.tex}
+    \section{Exercise 2}
+    Let $A$ be a ring and let $A[x]$ be the ring of polynomials in an indeterminate $x$, with coefficients in $A$. Let $f=a_0+a_1x+\cdots+a_nx^n\in A[x]$.
+
+    \textbf{Question 2.i}
+
+    Prove that $f$ is a unit in $A[x]$ $\Leftrightarrow$ $a_0$ is an unit in $A$ and $a_1,\ldots,a_n$ are nilpotent.
+
+    \textbf{Hint:} If $b_0+\cdots b_mx^m$ is the inverse of $f$, prove by induction on $r$, that $a_n^{r+1}b_{m-r}=0$. Hence show that $a_n$ is nilpotent and then use Ex. $1$.
+
+    \textbf{Solution} Suppose we use the hint, then we have to prove that dfd
+
+\end{document}

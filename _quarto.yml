@@ -2,13 +2,11 @@ project:
   type: website
 
 website:
-  title: "Spec(R): Advanced Math Notes"
+  title: "Math Learning Blog"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: hartshorne.qmd
-        text: Hartshorne Solutions
 
 format:
   html:
@@ -30,3 +28,4 @@ format:
               }
             };
           </script>
+    include-before-body: latex/math.tex

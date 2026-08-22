@@ -1,0 +1,30 @@
+\documentclass[11pt,a4paper]{amsart} % Or article/book
+
+% --- GLOBAL PREAMBLE ---
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% --- THEOREM STYLES & COMMANDS ---
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\begin{document}
+    
+    \title{Textbook Solutions Manual}
+    \author{Your Name}
+    %	\maketitle
+    
+    % --- INTERACTIVE COMPILATION ZONE ---
+    % Comment out lines using '%' to only preview what you are currently testing
+    
+    %\input{./Appendix/Product of subgroups of a group.tex}
+    
+    
+\end{document}
