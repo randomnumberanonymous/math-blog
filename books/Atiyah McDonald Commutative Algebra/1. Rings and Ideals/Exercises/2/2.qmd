@@ -4,17 +4,19 @@ title: "Question 2"
 
 Let $A$ be a ring and let $A[x]$ be the ring of polynomials in an indeterminate $x$, with coefficients in $A$. Let $f=a_0+a_1x+\cdots+a_nx^n\in A[x]$.
 
-## (i)
+## 
 
-Prove that $f$ is a unit in $A[x]$ $\Leftrightarrow$ $a_0$ is an unit in $A$ and $a_1,\ldots,a_n$ are nilpotent.
+**(i).** Prove that $f$ is a unit in $A[x]$ $\Leftrightarrow$ $a_0$ is an unit in $A$ and $a_1,\ldots,a_n$ are nilpotent.
 
 Hint: If $b_0+\cdots b_mx^m$ is the inverse of $f$, prove by induction on $r$, that $a_n^{r+1}b_{m-r}=0$. Hence show that $a_n$ is nilpotent and then use Ex. $1$. 
 
-## Solution 
+## 
+
+**Solution:** 
 
 Suppose $g=b_0+\cdots +b_mx^m$. Let $h=fg$. If $h = \sum_i h_ix^i$. Then $h_i=0$ for $i>n+m$, and $$h_i = \sum_{k=0}^ia_{i-k}\,b_k,\quad 0\leq i\leq n+m$$
 
-### Interlude: A couple of points about polynomials
+**Interlude: A couple of points about polynomials**
 
 **One of the two fundamental properties of polynomials is that every polynomial has a unique decomposition as a sum of monomials.** Monomials are special polynomials that have a non zero component in only one degree. The $0$ polynomial, is the polynomial whose coefficient in every degree is $0$. In particular $0=0 + 0\cdot x+0\cdot x^2+\cdots 0\cdot x^n + \cdots$. The uniquness of the decomposition of a polynomial in terms of monomials implies that this is the **unique decomposition for the $0$ polynomial**. This means that if a polynomial is the $0$ polynomial, then its component in every degree is $0$. If $a(x)$ and $b(x)$ are two polynomials such that $a(x)=b(x)$ or equivalently $a(x)-b(x)=0$, then $a(x)-b(x) = \sum_i(a_i-b_i)x^i = 0$. So $a_i-b_i=0$ for all $i$ or $a_i=b_i$ for all $i$. So two polynomials are equal only if their component in each degree are equal. This stems from the unique decomposition of polynomial as a sum of monomials. 
 
@@ -22,7 +24,6 @@ By the way for a polynomial $a(x)=\sum_ia_ix^i$. We call $a_kx^k$, the component
 
 **The second fundamental property of the polynomials is how they multiply, $ax^n \cdot bx^m = abx^{m+n}$. Using this and the distributive and commutative properties of the operations in commutative rings we get the multiplication for general polynomials.**
 
----
 
 Suppose $g$ is the (multiplicative)inverse of $f$. $$(b_0+\cdots +b_mx^m)(a_0+a_1x+\cdots+a_nx^n) = 1.$$
 
@@ -42,25 +43,31 @@ For the reverse implication note that if $a_i$ is nilpotent for $i>0$, then $a_i
 
 **Note:** If a polynomial $f(x)$ is a unit, then $f_0$ is a unit. This also holds good for polynomials in more than $1$ variable and also in power series rings in one or more than one variable. The proof of this fact in these rings is similar to the proof for polynomials in $1$ variable case. 
 
-## (ii) 
+---
 
-$f$ is nilpotent $\Leftrightarrow$ $a_0,a_1,\ldots,a_n$ are nilpotent.
+## 
 
-## Solution
+**(ii).** $f$ is nilpotent $\Leftrightarrow$ $a_0,a_1,\ldots,a_n$ are nilpotent.
 
-As in the proof of the reverse implication in part (i), if $a_i,i\geq 0$ are nilpotent then $a_ix^i$ are nilpotent. Hence the sum $\sum_{i\geq 0}a_ix^i$ is nilpotent. So $f(x)$ is nilpotent. 
+## 
+
+**Solution:**
+
+As in the proof of the reverse implication in part **(i).** if $a_i,i\geq 0$ are nilpotent then $a_ix^i$ are nilpotent. Hence the sum $\sum_{i\geq 0}a_ix^i$ is nilpotent. So $f(x)$ is nilpotent. 
 
 Note that we cannot have that $a, a+b$ are nilpotent but $b$ is not nilpotent for elements $a,b$. It is so because $b = (a+b)-(a)$ and the sum and difference of two nilpotents is nilpotent. But the sum of two non nilpotents can be nilpotent. For example $1+(-1)=0$. 
 
 The constant term of $f^r$ is $a_0^r$. So if $f^R=0$. We must also have that the constant term of $f^R=0$. So we have that $a_0^R=0$. Hence $a_0$ is nilpotent. A similar argument will imply the leading coefficient $a_n$ must also be nilpotent. Specifically if $f^R=0$. Then the coefficient of $x^{nR}$ in $f^R$ is $a_n^R$. Hence $a_n^R=0$. Hence $a_n$ is nilpotent. Thus $a_nx^n$ is nilpotent. So $f-a_nx^n = a_0+\cdots+a_{n-1}x^{n-1}$ is also nilpotent. Iterating this $n-1$ times we will get that $a_0,a_1,\ldots,a_{n-1}$ are nilpotent. 
 
+---
 
-## (iii)
+## 
 
+**(iii).** $f$ is a zero-divisor $\Leftrightarrow$ there exists $a\neq 0$ in $A$ such that $af=0$.[Choose a $^{\text{nonzero}}$ polynomial $g=b_0+b_1x+\cdots+b_mx^m$ of least degree $m$ such that $fg=0$. Then $a_nb_m=0$, hence $a_ng=0$ (because $a_ng$ annihilates $f$ and has degree $< m$). Now show by induction that $a_{n-r}g=0\,(0\leq r\leq n)$.]
 
-$f$ is a zero-divisor $\Leftrightarrow$ there exists $a\neq 0$ in $A$ such that $af=0$.[Choose a $^{\text{nonzero}}$ polynomial $g=b_0+b_1x+\cdots+b_mx^m$ of least degree $m$ such that $fg=0$. Then $a_nb_m=0$, hence $a_ng=0$ (because $a_ng$ annihilates $f$ and has degree $< m$). Now show by induction that $a_{n-r}g=0\,(0\leq r\leq n)$.]
+## 
 
-## Solution
+**Solution:**
 
 Given an element $m$ of a module $M$ over a ring $R$, consider the map $$R\to M,\quad r\mapsto rm.$$ The image of this map is commonly denoted as $\langle m\rangle$ or $Rm$ is called the cyclic submodule generated by $m$ in $M$. The kernel of this map is the set of elements $\{r\in R: rm=0\}$. This kernel is called the Annhilator of $m$,  and is denoted $\text{Ann}_R\,m$. If one things of multiplication by elements of a ring as an action of the ring on the module($\phi_r(m)=rm$), then elements in $\ann{m}$ kill or annhilate $m$ under this action. 
 
@@ -90,11 +97,15 @@ We have used crucially if $r\in R$ annhilates the leading coefficient of $g$, th
 
 This concludes the proof.
 
-## (iv)
+---
 
-$f$ is said to be primitive if $(a_0,a_1,\ldots,a_n)=(1)$. Prove that if $f,g\in A[x]$, then $fg$ is primitive $\Leftrightarrow$ $f$ and $g$ are primitive.
+## 
 
-## Solution
+**(iv).** $f$ is said to be primitive if $(a_0,a_1,\ldots,a_n)=(1)$. Prove that if $f,g\in A[x]$, then $fg$ is primitive $\Leftrightarrow$ $f$ and $g$ are primitive.
+
+## 
+
+**Solution:**
 
 The notation $(a_0,a_1,\ldots,a_n)$ denotes the ideal generated by the elements $a_0,a_1,\ldots,a_n$. If $a\in (b)$, for $a,b$ in a ring $R$, then $a=br$ for some $r\in R$. Hence when $a\in (b)$, we sometimes say $b$ divides $a$ or $b|a$. If $a\in (b)$ and $b\in (a)$, then $a=rb$ and $b=r'a$ for some $r,r'$ in the ring. So $a=rr'a$ and $b=r'rb$. This implies $(1-rr')a=0$ and $(1-r'r)b=0$. If $R$ is an **integral domain** and $a,b$ are nonzero elements, then we must have $1-r'r=0$ or $r'r=1$. Hence when $R$ is an integral domain and $a,b$ are two nonzero elements dividing each other then $a=rb$ and $b=r'a$, where $r,r'$ are units. We also have that $(a)=(b)$. Sometimes they are called associates. The terms like divisibility are mostly used in integral domains. In integral domains $(a)=(b)\Leftrightarrow a|b \text{ and } b|a$. In this context if $(a_0,a_1,\ldots,a_n)$ is a principal ideal, say it is $(r)$, then $r$ is said to be the gcd of $a_0,a_1,\ldots,a_n$. $(1)=R$, and if for two elements $(a,b)=(1)=R$, we say $a,b$ are coprime. $(1)$ is called the unit ideal(the ideal generated by any unit).
 
